@@ -1,0 +1,29 @@
+.header
+    padding: 24px 0
+    backdrop-filter: blur(30px)
+    background-color: rgba(0, 0, 0, .15)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 9999
+
+    .logo
+        gap: 7px
+        color: $prime-2
+        img
+            max-width: 74px
+
+    .nav
+        &__list
+            gap: 28px
+            &-link
+                padding: 5px
+                font-weight: 400
+                font-size: 20px
+                line-height: 28.76px
+                text-transform: lowercase
+
+        &__chat,
+        &__contacts
+            display: none
