@@ -9,12 +9,20 @@
     z-index: 9999
 
     .logo
-        gap: 7px
+        gap: 17.5px
         color: $prime-2
+        position: relative
+        z-index: 10
         img
             max-width: 74px
 
+    .btn__menu
+        display: none
+        position: relative
+        z-index: 10
+
     .nav
+        text-align: center
         &__list
             gap: 28px
             &-link
@@ -27,3 +35,142 @@
         &__chat,
         &__contacts
             display: none
+
+        &__footer
+            font-size: 14px
+            line-height: 20px
+            opacity: .4
+
+    @media (max-width: 1300px)
+        .btn__menu
+            display: block
+            width: 48px
+            height: 48px
+            background-color: $prime
+            border-radius: 15px
+            position: relative
+
+            &::before,
+            &::after
+                content: ''
+                transition: all .3s ease-in-out
+                display: block
+                margin: 0 auto
+                height: 3px
+                width: 24px
+                position: absolute
+                top: calc(50% - 4.5px)
+                left: 50%
+                transform: translate(-50%, -50%)
+                border-radius: 5px
+                background-color: $black
+
+            &::after
+                top: calc(50% + 4.5px)
+
+            &.active
+                &::before,
+                &::after
+                    top: 50%
+                    transform: translate(-50%, -50%) rotate(45deg)
+
+                &::after
+                    transform: translate(-50%, -50%) rotate(-45deg)
+
+        .nav
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            height: 100vh
+            background-color: $prime
+            top: 0
+            right: 0
+            padding: 100px 32px
+            background: linear-gradient(0deg, rgba(8, 49, 56, 0.4), rgba(8, 49, 56, 0.4)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+            backdrop-filter: blur(60px)
+            transition: all .3s ease-in-out
+            overflow-x: scroll
+            opacity: 0
+            visibility: hidden
+            transform: translateY(-20%)
+
+            &.active
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
+
+            &__list
+                margin: auto
+                display: block
+                width: 100%
+                &-link
+                    display: block
+                    width: 100%
+                    padding: 28px 0
+                    font-weight: 400
+                    border-bottom: 0.5px solid rgba(255, 255, 255, .3)
+                    color: rgba(255, 255, 255, .5)
+                    &.active
+                        color: $white
+
+                &>*:last-child *
+                    border: none
+
+            &__chat,
+            &__contacts
+                padding: 40px 32px 30px
+                display: block
+
+            &-label
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                opacity: .4
+                display: block
+                margin: 0 0 6px
+
+            &__chat
+                span
+                    margin-bottom: 20px
+
+                .fx-ac
+                    gap: 9px
+
+            &__contacts
+                border-top: 1px solid rgba(255, 255, 255, .3)
+                &-link
+                    display: block
+                    font-size: 16px
+                    line-height: 140%
+
+    @media (max-width: 720px)
+        backdrop-filter: none
+        background-color: rgba(0, 0, 0, 0)
+        .logo
+            gap: 12.29px
+            font-size: 13.55px
+            line-height: 23.39px
+
+            img
+                max-width: 51.65px
+
+        .btn__menu
+            width: 32px
+            height: 32px
+            border-radius: 10px
+            &::before,
+            &::after
+                width: 16px
+                height: 2px
+                top: calc(50% - 3px)
+
+            &::after
+                top: calc(50% + 3px)
+
+        .nav
+            padding: 86px 10px
+            &__list
+                &-link
+                    font-size: 14px
+                    line-height: 115%

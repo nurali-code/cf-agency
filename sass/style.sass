@@ -3,5 +3,112 @@
 @import 'header'
 
 .hero
+    text-align: center
+    padding: 0
+    .container
+        min-height: 600px
+        height: 100vh
+        max-height: 1000px
+        padding-top: 96.5px
+        padding-bottom: 50px
+
+        @media screen and ( max-width:720px  )
+            padding-top: 81.84px
+
+    &__logo
+        max-width: 266px
+        margin: 0 auto 63px
+
+    &__content
+        margin: auto
+
+    h1
+        font-weight: 500
+        font-size: 106px
+        line-height: 103.9px
+        letter-spacing: -6.11px
+
+    &__link
+        width: fit-content
+        margin: 0 auto
+        font-weight: 400
+        font-size: 16px
+        line-height: 28.76px
+
+        .ic
+            width: 15px
+            height: 15px
+            display: block
+            margin: 10px auto 0
+
+    @media screen and ( max-width: 1300px  )
+        &__logo
+            max-width: 219px
+            margin-bottom: 31px
+
+        h1
+            font-size: 84.38px
+            line-height: 82.71px
+            letter-spacing: -4.86px
+
+        &__link
+            font-size: 14px
+            line-height: 24.5px
+            .ic
+                width: 12px
+                height: 12px
+
+    @media screen and ( max-width: 720px  )
+        &__logo
+            max-width: 100px
+            margin-bottom: 40px
+
+        h1
+            font-size: 41.47px
+            line-height: 40.65px
+            letter-spacing: -2.39px
+
+.behind
+    padding: 160px 0
+    .container
+        max-width: 1404px
+
+    &__box
+        background-color: rgba( 0, 0, 0, .15 )
+        border: 1px solid #FFFFFF0A
+        backdrop-filter: blur(20px)
+        padding: 118px 69px 118px 100px
+        border-radius: 20px
+        color: $black
+        gap: 60px
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate( -50%, -50% )
+            width: calc( 100% - 40px )
+            height: calc( 100% - 40px )
+            background-color: $prime-2
+            border-radius: 20px
+            z-index: -1
+            pointer-events: none
+
+        &>*
+            width: 52%
+            &:first-child
+                width: 48%
+
+    &__heading
+        font-size: 58px
+        line-height: 130%
+        margin: 0
+
+    &__text
+        opacity: .6
+        font-size: 22px
+        line-height: 33.55px
 
 @import 'footer'

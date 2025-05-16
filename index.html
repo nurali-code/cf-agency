@@ -22,17 +22,20 @@
                 <span>Agency</span>
             </a>
 
-            <div class="nav">
-                <ul class="nav__list fx-ac">
-                    <li><a href="#" class="nav__list-link">About us</a></li>
+            <button class="btn__menu" aria-label="menu"></button>
+
+            <nav class="nav fx-col">
+                <ul class="nav__list fx-ac fx-jc">
+                    <li><a href="#" class="nav__list-link active">About us</a></li>
                     <li><a href="#" class="nav__list-link">Your friends</a></li>
                     <li><a href="#" class="nav__list-link">analytics</a></li>
                     <li><a href="#" class="nav__list-link">our friends</a></li>
+                    <li class="tb-show"><a href="#" class="nav__list-link">Submit Request</a></li>
                 </ul>
 
                 <div class="nav__chat">
-                    <span class="nav__chat-label">Let’s chat</span>
-                    <div class="fx-ac">
+                    <span class="nav-label">Let’s chat</span>
+                    <div class="fx-ac fx-jc">
                         <a href="#" aria-label="viber" target="_blank" class="nav__chat-link">
                             <img src="img/vb.svg" alt="viber"></a>
                         <a href="#" aria-label="telegram" target="_blank" class="nav__chat-link">
@@ -43,19 +46,47 @@
                 </div>
 
                 <div class="nav__contacts">
-                    <span class="nav__contacts-label">Let’s chat</span>
-                    <div class="fx-ac">
+                    <span class="nav-label">Contact us</span>
+                    <div class="fx-ac fx-jc fx-col">
                         <a href="tel:+14065550120" class="nav__contacts-link">+1 (406) 555-0120</a>
                         <a href="tel:+14805550103" class="nav__contacts-link">+1 (480) 555-0103</a>
                     </div>
                 </div>
-            </div>
 
-            <a href="#" class="btn">Submit Request</a>
+                <p class="nav__footer tb-show">© 2025 — CF Agancy All rights reserved.</p>
+            </nav>
+
+            <a href="#" class="btn tb-hide">Submit Request</a>
         </div>
     </header>
 
     <main>
+        <section class="hero">
+            <div class="container fx-col">
+                <div class="hero__content">
+                    <img src="img/cf-agency.png" alt="logo" class="hero__logo">
+                    <h1>Premium Traffic Provider</h1>
+                </div>
+                <a href="#" class="hero__link">
+                    Learn more <svg class="ic">
+                        <use xlink:href="img/sprite.svg#arr-d"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="behind">
+            <div class="container">
+                <div class="behind__box fx-ac">
+                    <h2 class="behind__heading">We’re the ones behind the curtain.</h2>
+                    <p class="behind__text">
+                        Our team unites strategists, designers, and marketers who turn ideas into real outcomes. We’re
+                        not about hype — we’re about performance. Fast work, honest communication, and deep respect for
+                        your business.
+                    </p>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -64,6 +95,8 @@
             <p>&copy; 2023 Premium Traffic Provider. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
