@@ -83,14 +83,16 @@
         gap: 60px
         position: relative
         z-index: 1
+        --pt: 17px
+        --pb: 20px
         &::before
             content: ''
             position: absolute
             top: 50%
             left: 50%
             transform: translate( -50%, -50% )
-            width: calc( 100% - 40px )
-            height: calc( 100% - 40px )
+            width: calc( 100% - (var(--pt) * 2) )
+            height: calc( 100% - (var(--pb) * 2) )
             background-color: $prime-2
             border-radius: 20px
             z-index: -1
@@ -109,6 +111,288 @@
     &__text
         opacity: .6
         font-size: 22px
-        line-height: 33.55px
+        line-height: 150%
+
+    @media screen and ( max-width: 1440px  )
+        padding: 118px 0
+        .container
+            max-width: 1040px
+
+        &__box
+            --pt: 13px
+            --pb: 15px
+            padding: 88px 52px 88px 77px
+            gap: 40px
+
+            &>*
+                width: 51%
+                &:first-child
+                    width: 49%
+
+        &__heading
+            font-size: 42px
+
+        &__text
+            font-size: 16px
+
+    @media screen and ( max-width: 740px )
+        padding: 45px 0
+        &__box
+            display: block
+            padding: 30px 35px
+            border-radius: 11.5px
+            --pt: 10px
+            --pb: 10px
+            &::before
+                border-radius: 11.5px
+
+            &>*
+                width: 100% !important
+
+        &__heading
+            font-size: 20px
+            margin-bottom: 24px
+
+        &__text
+            font-size: 14px
+
+    @media screen and ( max-width: 500px )
+        &__text
+            font-size: 10px
+
+@import 'slick'
+
+.fr
+    padding: 130px 0
+
+    &__bg
+        border-radius: 45px
+        backdrop-filter: blur(25px)
+
+    .h2
+        max-width: 1118px
+        margin: 0 auto 100px
+
+    &__subheading,
+    &__name
+        width: fit-content
+        font-weight: 400
+        font-size: 16px
+        line-height: 100%
+        background-color: rgba(#F4F4F4, .2)
+        padding: 8px 13px 6px
+        border-radius: 8px
+        letter-spacing: -0.2px
+    &__name
+        white-space: nowrap
+        backdrop-filter: blur(35px)
+        position: absolute
+        z-index: 111
+        top: 24px
+        left: 50%
+        transition: background-color .2s ease-in-out
+        transform: translateX(-50%)
+
+    &__subheading
+        color: $black
+        background-color: $white
+        box-shadow: 0px 3.52px 4.4px 0px #15151526
+        margin: 0 auto 17px
+
+    &__text
+        text-align: left
+        font-size: 12px
+        line-height: 120%
+        letter-spacing: -0.2px
+
+    &__position
+        line-height: 120%
+        font-size: 16px
+        margin: 0 0 12px
+
+    &__img
+        // opacity: 0
+        position: relative
+        z-index: -11
+        width: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.67%, rgba(255, 255, 255, 0.3) 100%)
+
+    &__box
+        width: calc( 100% - 26px )
+        position: absolute
+        z-index: 1
+        bottom: 0
+        left: 13px
+        border: 1.7px solid rgba( 255, 255, 255, .2 )
+        border-bottom: none
+        border-radius: 24px 24px 0 0
+        padding: 50px 9px
+        backdrop-filter: blur(25px)
+        transform: translateY(20%)
+        opacity: 0
+        visibility: hidden
+        transition: all .2s ease-in-out
+
+    &__info
+        text-align: center
+        padding: 24px
+        position: absolute
+        transition: all .2s ease-in-out
+        bottom: 0
+        left: 0
+        width: 100%
+        i
+            font-style: normal
+        .ic
+            width: 38px
+            height: 38px
+            display: block
+            box-shadow: 0px 1.55px 1.94px 0px #15151526
+
+            margin: 0 auto 10px
+
+    &__number
+        font-size: 67.82px
+        line-height: 100%
+        font-weight: 700
+        color: $prime
+        position: absolute
+        z-index: 111
+        top: 47%
+        left: 50%
+        transform: translate( -50%, -50% )
+        margin: 0
+
+    &__slider
+        width: 100%
+        margin: 0 auto 100px
+        &-item
+            width: 328px
+            margin: 0 6px
+            text-align: center
+            border: 1px solid #576069
+            border-radius: 20px
+            position: relative
+            z-index: 1
+            overflow: hidden
+
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: -1
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.49%, #0E1525 100%)
+
+            &::after
+                transition: all .2s ease-in-out
+                opacity: 0
+                z-index: -1112
+                background-image: linear-gradient(180deg, #C5D86D 3.81%, #51DFFF 100%)
+
+            &:hover
+                &::after
+                    opacity: 1
+
+                .fr
+                    &__box
+                        transform: translateY(0)
+                        opacity: 1
+                        visibility: visible
+
+                    &__name
+                        background-color: rgba( 0, 0, 0, .5 )
+
+                    &__info
+                        opacity: 0
+
+    .btn
+        margin: 0 auto
+        min-width: 264px
+
+    @media screen and ( max-width: 1300px )
+        padding: 128px 0 170px
+        .h2
+            text-align: center
+            margin-bottom: 70px
+
+        &__box
+            padding: 33px 11px
+
+        &__name,
+        &__subheading
+            padding: 10px 15px 7px
+        &__position,
+        &__name,
+        &__subheading
+            font-size: 18px
+
+        &__text
+            font-size: 16px
+
+        &__slider
+            margin-bottom: 90px
+
+        .btn
+            min-width: 610px
+
+    @media screen and ( max-width: 720px )
+        .btn
+            min-width: 95%
+
+        &__name
+            top: 7px
+        &__name,
+        &__subheading
+            padding: 6px 10px 4px
+
+        &__number
+            font-size: 40px
+
+        &__info
+            padding: 8px 12px
+            .ic
+                width: 20px
+                height: 20px
+                margin-bottom: 7px
+
+        &__box 
+            padding: 20px 5px
+            border-radius: 10px 10px 0 0
+
+        &__name,
+        &__info,
+        &__subheading,
+        &__position,
+        &__text
+            font-size: 12px
+
+        &__slider
+            &-item
+                border-radius: 8px
+
+@import 'marquee'
+
+.company
+    padding: 137px 0
+    text-align: center
+    &-slider
+
+    .h2
+        margin-bottom: 90px
+
+    @media screen and ( min-width: 1300px )
+        .h2
+            font-weight: 275
+            font-size: 86px
+            line-height: 90%
+            text-align: center
+
+    @media screen and ( max-width:  1300px )
+        .h2
+            margin-bottom: 55px
 
 @import 'footer'
