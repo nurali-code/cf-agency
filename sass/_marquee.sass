@@ -45,9 +45,18 @@
             height: 103px
             border-radius: 11px
 
-@keyframes scroll
-    from
-        transform: translateX(0)
+    @media screen and ( max-width: 720px )
+        --gap: 15px
+        margin-bottom: 16px
+        li
+            width: 200px
+            height: 80px
+            border-radius: 8px
+        
 
-    to
-        transform: translateX(calc(-100%))
+// @keyframes scroll
+//     from
+//         transform: translateX(0)
+
+//     to
+//         transform: translateX(calc(-100%))
