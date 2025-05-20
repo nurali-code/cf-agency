@@ -7,7 +7,7 @@
     padding: 0
     .container
         min-height: 600px
-        height: 100vh
+        height: 100svh
         max-height: 1000px
         padding-top: 96.5px
         padding-bottom: 50px
@@ -197,6 +197,7 @@
 
     &__subheading
         color: $black
+        font-weight: 500
         background-color: $white
         box-shadow: 0px 3.52px 4.4px 0px #15151526
         margin: 0 auto 17px
@@ -222,7 +223,7 @@
     &__box
         width: calc( 100% - 26px )
         position: absolute
-        z-index: 1
+        z-index: 111
         bottom: 0
         left: 13px
         border: 1.7px solid rgba( 255, 255, 255, .2 )
@@ -401,17 +402,27 @@
                 padding: 0 19px !important
 
     @media screen and ( max-width: 720px )
+<<<<<<< HEAD
         .h2
             margin-bottom: 60px
+=======
+        padding: 52px 0
+        .h2
+            margin-bottom: 50px
+>>>>>>> deaa840e50f6a155b36551c38d5cadebce3a0299
 
         .btn
-            min-width: 95%
+            min-width: 94%
+
+        &__subheading
+            margin-bottom: 7px
 
         &__name
             top: 7px
         &__name,
         &__subheading
             padding: 6px 10px 4px
+            border-radius: 3.8px
 
         &__number
             font-size: 40px
@@ -419,11 +430,16 @@
         &__info
             padding: 8px 12px
             .ic
-                width: 20px
-                height: 20px
+                width: 26px
+                height: 26px
                 margin-bottom: 7px
 
         &__box
+<<<<<<< HEAD
+=======
+            width: calc(100% - 12px)
+            left: 6px
+>>>>>>> deaa840e50f6a155b36551c38d5cadebce3a0299
             padding: 20px 5px
             border-radius: 10px 10px 0 0
 
@@ -432,12 +448,14 @@
         &__subheading,
         &__position,
         &__text
-            font-size: 12px
+            font-size: 11px
 
         &__slider
+            margin-bottom: 50px
             &-item
                 border-radius: 8px
 
+<<<<<<< HEAD
         &.--sm
             .fr
                 &__box
@@ -461,6 +479,15 @@
             .slick-list,
             .slick-track
                 padding: 0 10px !important
+=======
+    @media screen and ( max-width: 350px )
+        &__name,
+        &__info,
+        &__subheading,
+        &__position,
+        &__text
+            font-size: 9px
+>>>>>>> deaa840e50f6a155b36551c38d5cadebce3a0299
 
 @import 'marquee'
 
@@ -481,6 +508,9 @@
 
     @media screen and ( max-width:  1300px )
         .h2
-            margin-bottom: 55px
+            margin-bottom: 50px
+
+    @media screen and ( max-width: 720px )
+        padding: 52px 0 70px
 
 @import 'footer'

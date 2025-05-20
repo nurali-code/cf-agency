@@ -31,6 +31,8 @@ $add-1: var(--add-1)
 $add-2: var(--add-2)
 $add-3: var(--add-3)
 
+html
+    scroll-behavior: smooth
 body, html
     font-family: "Poppins", sans-serif
     font-weight: 400
@@ -95,7 +97,7 @@ button
 .btn
     font-weight: 500
     font-size: 16px
-    line-height: 23.97px
+    line-height: 120%
 
     text-align: center
     color: $black
@@ -201,7 +203,28 @@ section
         font-size: 64px
         text-align: center
 
+<<<<<<< HEAD
 @media screen and ( max-width: 720px )
     .h2
         font-size: 18px
         letter-spacing: -.4px
+=======
+@media screen and ( max-width: 1000px )
+    .h2
+        font-size: 42px
+
+@media screen and ( max-width: 720px )
+    .h2
+        font-size: 18px
+        letter-spacing: -.6px
+
+    .btn
+        font-size: 14px
+        padding: 8px 20px 7px
+        min-height: 37px
+
+@media screen and ( max-width: 350px )
+    .btn
+        font-size: 12px
+
+>>>>>>> deaa840e50f6a155b36551c38d5cadebce3a0299
