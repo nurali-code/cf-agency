@@ -164,7 +164,6 @@
 
 .fr
     padding: 130px 0
-
     &__bg
         border-radius: 45px
         backdrop-filter: blur(25px)
@@ -183,6 +182,8 @@
         padding: 8px 13px 6px
         border-radius: 8px
         letter-spacing: -0.2px
+        display: block
+
     &__name
         white-space: nowrap
         backdrop-filter: blur(35px)
@@ -190,8 +191,9 @@
         z-index: 111
         top: 24px
         left: 50%
-        transition: background-color .2s ease-in-out
+        transition: all .2s ease-in-out
         transform: translateX(-50%)
+        margin: 0
 
     &__subheading
         color: $black
@@ -237,18 +239,17 @@
         text-align: center
         padding: 24px
         position: absolute
-        transition: all .2s ease-in-out
         bottom: 0
         left: 0
         width: 100%
         i
             font-style: normal
+
         .ic
             width: 38px
             height: 38px
             display: block
             box-shadow: 0px 1.55px 1.94px 0px #15151526
-
             margin: 0 auto 10px
 
     &__number
@@ -263,9 +264,10 @@
         transform: translate( -50%, -50% )
         margin: 0
 
-    &__slider
+    &__slider,
+    &__slider--second
         width: 100%
-        margin: 0 auto 100px
+        margin: 0 auto
         &-item
             width: 328px
             margin: 0 6px
@@ -285,6 +287,7 @@
                 width: 100%
                 height: 100%
                 z-index: -1
+                pointer-events: none
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.49%, #0E1525 100%)
 
             &::after
@@ -313,6 +316,47 @@
         margin: 0 auto
         min-width: 264px
 
+    &.--sm
+        .h2
+            max-width: 100%
+            padding: 0 20px
+            margin-bottom: 65px
+
+        .fr
+            &__name
+                background-color: rgba(0, 0, 0, .2) !important
+
+            &__subheading
+                margin-top: 17px
+
+            &__img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+
+            &__slider,
+            &__slider--second
+                &-item
+                    aspect-ratio: 1
+                    &::after
+                        display: none
+
+                    &:hover
+                        .fr__name
+                            top: 53px
+
+            &__box
+                height: calc( 100% - 32px )
+                bottom: 16px
+                padding: 94px 8px 24px
+                border-radius: 24px
+
+            &__item
+
+    &__submit
+        margin-top: 100px
+
     @media screen and ( max-width: 1300px )
         padding: 128px 0 170px
         .h2
@@ -333,13 +377,33 @@
         &__text
             font-size: 16px
 
-        &__slider
-            margin-bottom: 90px
+        &__submit
+            margin-top: 90px
 
         .btn
             min-width: 610px
 
+        &.--sm
+            .fr
+                &__slider
+                    &-item
+                        width: 352px
+
+                &__name
+                    top: 28px !important
+
+                &__box
+                    left: 14px
+                    padding: 80px 9px 11px
+
+            .slick-list,
+            .slick-track
+                padding: 0 19px !important
+
     @media screen and ( max-width: 720px )
+        .h2
+            margin-bottom: 60px
+
         .btn
             min-width: 95%
 
@@ -359,7 +423,7 @@
                 height: 20px
                 margin-bottom: 7px
 
-        &__box 
+        &__box
             padding: 20px 5px
             border-radius: 10px 10px 0 0
 
@@ -373,6 +437,30 @@
         &__slider
             &-item
                 border-radius: 8px
+
+        &.--sm
+            .fr
+                &__box
+                    padding: 53px 5px 5px
+                    width: calc( 100% - 16px )
+                    left: 8px
+                    top: 9px
+                    height: calc( 100% - 18px )
+                    border-radius: 14px
+                &__name
+                    top: 7px !important
+                &__slider
+                    &-item
+                        border-radius: 11.76px
+                        width: 198px
+                        margin: 0 5px
+                        &:hover
+                            .fr__name
+                                top: 14px !important
+
+            .slick-list,
+            .slick-track
+                padding: 0 10px !important
 
 @import 'marquee'
 
