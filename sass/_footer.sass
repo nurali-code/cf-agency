@@ -1,3 +1,154 @@
 .footer
+    padding: 43px 0
     margin-top: auto
-    display: none
+    border-top: 0.9px solid #FFFFFF33
+    background-color: rgba(#111111, .2)
+    .container
+        max-width: 1179px
+
+    &__heading
+        display: block
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        margin-bottom: 10px
+        opacity: .4
+
+    &__col
+        width: 57.5%
+        margin-left: auto
+
+    &__nav
+        &-link
+            font-weight: 400
+            font-size: 16px
+            line-height: 140%
+            padding: 2.5px 0
+
+    &__icons
+        gap: 9px
+        width: fit-content
+
+    &__contacts
+        max-width: 400px
+        &-link
+            font-weight: 400
+            font-size: 16px
+            line-height: 140%
+            opacity: .8
+            font-variant-numeric-figure: lining-nums
+            font-variant-numeric-spacing: proportional-nums
+
+        &-inner
+            column-count: 2
+
+    &__chat
+        margin-top: 57px
+
+    a
+        width: fit-content
+        display: block
+
+    &__bottom
+        margin-top: 117px
+        &-text
+            font-weight: 400
+            font-size: 12px
+            line-height: 150%
+            opacity: .4
+
+    &__lang 
+        gap: 28px
+
+    @media screen and ( max-width: 1300px )
+        padding: 160px 0 80px
+        text-align: center
+        &__nav
+            margin: auto
+            column-count: 2
+            column-gap: 112px
+            text-align: left
+            &-link
+                margin-bottom: 40px
+                font-size: 26px
+                line-height: 150%
+                color: rgba(255, 255, 255, 0.5)
+
+            .footer__heading
+                display: none
+
+        &__heading
+            font-size: 26px
+            line-height: 150%
+            margin-bottom: 27px
+
+        &__col
+            width: 100%
+            margin-left: 0
+
+        &__contacts
+            order: 2
+            max-width: 100%
+            &-link
+                font-size: 20px
+                opacity: .8
+                margin: 0 auto
+                padding: 8px 0
+                &:first-child
+                    padding-top: 0
+            &-inner
+                column-count: 1
+
+        &__chat
+            order: 1
+            margin-top: 43px
+            padding: 120px 0
+            border: 1px solid rgba(255, 255, 255, .3)
+            border-left: none
+            border-right: none
+            width: 100%
+            margin: 120px auto
+            .footer__heading
+                opacity: .4
+
+        &__email
+            display: none !important
+
+        &__icons
+            margin: 0 auto
+
+        &__bottom
+            &-text
+                width: 100%
+                font-size: 20px
+
+        &__lang,
+        &__subnav 
+            display: none
+        
+
+    @media screen and ( max-width: 720px )
+        padding: 40px 0 60px
+        &__heading
+            font-size: 16px
+            margin-bottom: 20px
+        &__nav
+            column-gap: 70px
+            &-link
+                font-size: 14px
+                line-height: 100%
+                margin-bottom: 20px
+
+        &__chat
+            padding: 30px 0
+            margin: 30px auto
+
+        &__contacts
+            &-link
+                padding: 4px 0
+                font-size: 16px
+
+        &__bottom
+            margin-top: 14px
+            &-text
+                font-size: 10px

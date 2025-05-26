@@ -535,7 +535,7 @@
         &>*
             width: calc( 100% - 40px / 3 )
 
-    &__rev 
+    &__rev
         max-width: 1400px
         margin: 55px auto
 
@@ -549,6 +549,42 @@
 
     &__img
         width: 100%
+
+    @media screen and ( max-width: 1600px )
+        &__rev
+            max-width: 1040px
+            margin: 44px auto
+
+    @media screen and ( max-width: 992px )
+        &__row
+            flex-wrap: wrap
+
+        @media screen and ( min-width: 721px )
+            &__row
+                flex-wrap: wrap
+                &>*
+                    width: calc(50% - 10px)
+                    &:last-child
+                        width: 100%
+            &__rev
+                &>*
+                    &:last-child
+                        flex-direction: row
+                        & > *
+                            object-fit: contain
+                            object-position: top center
+                            width: calc(50% - 10px)
+
+    @media screen and ( max-width: 720px )
+        &__row
+            &>*
+                width: 100%
+
+        &__rev
+            margin: 40px 0
+            &>*
+                &:not(:last-child)
+                    display: none
 
 .contact
     .h2
@@ -749,3 +785,15 @@
                     min-width: 20px
 
 @import 'footer'
+
+
+
+
+// .fr
+// body::before,
+// body::after
+//     display: none !important
+
+// *
+//     backdrop-filter: none !important
+//     filter: none !important
