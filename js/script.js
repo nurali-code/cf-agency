@@ -79,3 +79,49 @@ $('.fr__slider--second').slick({
         }
     ]
 });
+
+// custom select 
+$('select').each(function () {
+    const $this = $(this).hide().wrap('<div class="select-wrap"></div>');
+    const $wrapper = $this.parent();
+    $wrapper.addClass($this.attr('class'));
+
+    const $selectedOption = $this.find('option[selected]');
+    const hasSelected = $selectedOption.length > 0;
+    const defaultOption = hasSelected ? $selectedOption : $this.find('option').eq(0);
+    const defaultText = defaultOption.text();
+   
+    const $customSelect = $('<div class="select"></div>')
+        .addClass($this.attr('class'))
+        .insertAfter($this)
+        .html(`<span>${defaultText}</span>`);
+    const $optionlist = $('<ul class="select-options"></ul>').insertAfter($customSelect);
+    $this.children('option').each(function () {
+        $('<li />', {
+            text: $(this).text(),
+            rel: $(this).val(),
+            class: $(this).attr('hidden'),
+            selected: $(this).attr('selected')
+        }).appendTo($optionlist);
+    });
+    $customSelect.click(function (e) {
+        e.stopPropagation();
+        const $parent = $(this).parent();
+        $('.select-wrap').css('z-index', '');
+        $('.select.active').not(this).removeClass('active').next('.select-options').hide();
+        $(this).toggleClass('active').next('.select-options').slideToggle(300);
+        // $parent.css('z-index', $(this).hasClass('active') ? '2222' : '');
+    });
+    $optionlist.on('click', 'li', function (e) {
+        e.stopPropagation();
+        $customSelect.html('<span>' + $(this).text()).removeClass('active' + '</span>');
+        $customSelect.removeClass('active');
+        $this.val($(this).attr('rel')).trigger('change'); // Р’С‹Р·РѕРІ .trigger('change')
+        $optionlist.hide();
+    });
+    $(document).click(function () {
+        $customSelect.removeClass('active');
+        // $wrapper.css('z-index', '');
+        $optionlist.hide();
+    });
+});

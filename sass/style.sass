@@ -113,6 +113,13 @@
         font-size: 22px
         line-height: 150%
 
+    &__bg
+        position: absolute
+        bottom: 0
+        min-width: 2220px
+        left: 50%
+        transform: translateX(-50%)
+
     @media screen and ( max-width: 1440px  )
         padding: 118px 0
         .container
@@ -164,9 +171,17 @@
 
 .fr
     padding: 130px 0
+    position: relative
+    z-index: 1
     &__bg
         border-radius: 45px
         backdrop-filter: blur(5px)
+        &-bg
+            top: 0
+            left: 0
+            width: 100%
+            z-index: -11
+            position: absolute
 
     .h2
         max-width: 1118px
@@ -177,6 +192,7 @@
         width: fit-content
         font-weight: 400
         font-size: 16px
+        letter-spacing: calc( 16px * 0.025 )
         line-height: 100%
         background-color: rgba(#F4F4F4, .2)
         padding: 8px 13px 6px
@@ -206,7 +222,7 @@
         text-align: left
         font-size: 12px
         line-height: 120%
-        letter-spacing: -0.2px
+        letter-spacing: calc( 12px * 0.025 )
 
     &__position
         line-height: 120%
@@ -237,6 +253,11 @@
         transition: all .2s ease-in-out
 
     &__info
+        font-weight: 400
+        font-size: 14px
+        line-height: 120%
+        letter-spacing: calc( 14px *.035 )
+
         text-align: center
         padding: 24px
         position: absolute
@@ -278,6 +299,7 @@
             position: relative
             z-index: 1
             overflow: hidden
+            cursor: pointer
 
             &::before,
             &::after
@@ -368,7 +390,12 @@
 
         &__name,
         &__subheading
+            letter-spacing: calc( 16px * 0.025 )
             padding: 10px 15px 7px
+
+        &__position
+            letter-spacing: calc( 16px * 0.045 )
+
         &__position,
         &__name,
         &__subheading
@@ -376,6 +403,7 @@
 
         &__text
             font-size: 16px
+            letter-spacing: calc( 16px * 0.025 )
 
         &__submit
             margin-top: 90px
@@ -437,6 +465,7 @@
         &__position,
         &__text
             font-size: 11px
+            letter-spacing: calc( 11px * 0.025 )
 
         &__slider
             margin-bottom: 50px
@@ -481,6 +510,8 @@
         .h2
             font-weight: 275
             font-size: 86px
+            letter-spacing: calc( 86px * 0.025 )
+
             line-height: 90%
             text-align: center
 
@@ -501,7 +532,7 @@
         font-weight: 400
         font-size: 60px
         line-height: 90%
-        letter-spacing: -1.5px
+        letter-spacing: calc( 60px * 0.025 )
         padding: 30px 58px 48px
         background-color: rgba(0, 0, 0, .15)
         margin-bottom: 30px
@@ -518,6 +549,11 @@
         background: radial-gradient(50% 50% at 50% 50%, rgba(27, 27, 27, 0) 0%, rgba(37, 161, 99, 0.2) 49.48%)
 
     label
+        font-weight: 500
+        font-size: 16px
+        line-height: 120%
+        letter-spacing: calc( 16px * 0.025 )
+
         display: block
         margin: 0 0 10px
 
@@ -527,6 +563,24 @@
         .btn
             width: 100%
             height: 75px
+            font-size: 20px
+            border-radius: 15px
+            position: relative
+            z-index: 1
+            &::after
+                content: ''
+                display: block
+                width: 65px
+                height: 65px
+                border-radius: 10px
+                background-repeat: no-repeat
+                background-size: cover
+                background-image: url('../img/arr_r.svg')
+                position: absolute
+                right: 5px
+                background-color: #fff
+                top: 50% 
+                transform: translateY(-50%)
 
     .inp
         &-wrap
@@ -569,5 +623,103 @@
             border-radius: 8.83px
             padding: 4.42px 17px 4.42px 4.42px
             background-color: $prime
+
+    @media screen and ( max-width:  1300px )
+        &__subheading
+            padding: 26px 51px 42px
+            span
+                padding-bottom: 94px
+
+        &-wrap
+            padding: 17px
+
+        &__form
+            margin-bottom: 13px
+            .btn
+                height: 66.24px
+                border-radius: 13.25px
+                &::after
+                    border-radius: 8.83px
+                    width: 57.4px
+                    height: 57.4px
+                    right: 4.42px
+
+        label
+            margin-bottom: 8px
+
+        &__info
+            padding: 17.66px
+            border-radius: 8.83px
+
+        &__tg
+            padding-top: 17.66px
+
+    @media screen and ( max-width:  720px )
+        &-wrap
+            padding: 8.12px
+            background: radial-gradient(124.64% 116.69% at 50% 50%, rgba(27, 27, 27, 0) 0%, rgba(37, 161, 99, 0.2) 49.48%)
+            backdrop-filter: blur(0px 1.62px 4.06px 0px #0000004D)
+
+        &__form
+            display: block
+
+        .inp-wrap
+            width: 100%
+            margin: 0 0 20px
+
+        label
+            font-size: 12px
+            letter-spacing: 12px * 0.025
+
+        &__subheading
+            border-radius: 6px
+            padding: 11.23px 11.23px 13.9px
+            font-size: 18px
+            line-height: 90%
+            letter-spacing: 18px * 0.025
+            span
+                padding-bottom: 13.7px
+
+        &__form
+            .btn
+                height: 30.45px
+                padding: 7px 
+                min-height: unset
+                font-size: 12px
+                border-radius: 6px
+                letter-spacing: 12px * 0.025
+                &::after
+                    right: 3px
+                    width: 26.39px
+                    height: 26.39px
+                    border-radius: 4.06px
+
+        &__info 
+            font-size: 10px 
+            padding: 8px 
+            border-radius: 4px
+            letter-spacing: 10px * 0.025
+            margin-bottom: 6px
+
+
+        &__tg 
+            padding-top: 8px 
+            &-text 
+                font-size: 10px 
+                line-height: 110%
+                letter-spacing: 10px * 0.025
+
+            &-btn 
+                font-size: 10px 
+                gap: 8px
+                line-height: 110%
+                letter-spacing: 10px * 0.025
+                border-radius: 4px
+                padding: 2px 8px 2px 2px
+                img 
+                    width: 20px
+                    height: 20px
+                    min-width: 20px
+
 
 @import 'footer'
