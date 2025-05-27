@@ -53,6 +53,7 @@
             background-color: $prime
             border-radius: 15px
             position: relative
+            opacity: 1 !important
 
             &::before,
             &::after
@@ -148,28 +149,29 @@
                     line-height: 140%
 
     @media (max-width: 720px)
+        padding: 20px 0
         backdrop-filter: none
         background-color: rgba(0, 0, 0, 0)
         .logo
-            gap: 12.29px
-            font-size: 13.55px
-            line-height: 23.39px
+            gap: 14px
+            font-size: 17px
+            line-height: 100%
 
             img
-                max-width: 51.65px
+                max-width: 66px
 
         .btn__menu
-            width: 32px
-            height: 32px
-            border-radius: 10px
+            width: 42px
+            height: 42px
+            border-radius: 12px
             &::before,
             &::after
-                width: 16px
-                height: 2px
-                top: calc(50% - 3px)
+                width: 23px
+                height: 3px
+                top: calc(50% - 4px)
 
             &::after
-                top: calc(50% + 3px)
+                top: calc(50% + 4px)
 
         .nav
             padding: 86px 10px
@@ -177,3 +179,25 @@
                 &-link
                     font-size: 14px
                     line-height: 115%
+
+    @media (max-width: 360px)
+        .btn__menu
+            width: 32px
+            height: 32px
+            border-radius: 10px
+            &::before,
+            &::after
+                width: 16px
+                top: calc(50% + 3px)
+                height: 2px
+
+            &::after
+                top: calc(50% - 3px)
+
+        .logo
+            gap: 12.29px
+            font-size: 13.55px
+            line-height: 23.39px
+
+            img
+                max-width: 51.65px
