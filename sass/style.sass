@@ -413,7 +413,7 @@
             letter-spacing: calc( 16px * 0.025 )
 
         &__submit
-            margin-top: 90px
+            margin-top: 80px
 
         .btn
             min-width: 610px
@@ -463,6 +463,8 @@
                 margin-bottom: 7px
 
         &__box
+            width: calc(100% - 10px)
+            left: 5px
             padding: 20px 5px
             border-radius: 10px 10px 0 0
 
@@ -475,9 +477,12 @@
             letter-spacing: calc( 11px * 0.025 )
 
         &__slider
-            margin-bottom: 50px
             &-item
                 border-radius: 8px
+
+        &__submit
+            margin-top: 50px
+        
 
         &.--sm
             .fr
@@ -502,6 +507,15 @@
             .slick-list,
             .slick-track
                 padding: 0 10px !important
+
+    @media screen and ( max-width: 360px )
+        &__name,
+        &__info,
+        &__subheading,
+        &__position,
+        &__text
+            font-size: 8px
+            letter-spacing: calc( 8px * 0.025 )
 
 @import 'marquee'
 
