@@ -6,6 +6,11 @@
     width: 100%
     z-index: 9999
 
+    transition: all .3s ease-in-out
+    &:not(.tab_active)
+        backdrop-filter: blur(16px)
+        background-color: rgba(0, 0, 0, .15)
+
     .logo
         gap: 17.5px
         color: $prime-2
@@ -39,11 +44,6 @@
             line-height: 20px
             opacity: .4
 
-    @media (min-width: 720px)
-        transition: all .3s ease-in-out
-        &:not(.tab_active)
-            backdrop-filter: blur(30px)
-            background-color: rgba(0, 0, 0, .15)
 
     @media (max-width: 1300px)
         .btn__menu
@@ -149,7 +149,7 @@
                     line-height: 140%
 
     @media (max-width: 720px)
-        padding: 20px 0
+        padding: 17px 0
         backdrop-filter: none
         background-color: rgba(0, 0, 0, 0)
         .logo
