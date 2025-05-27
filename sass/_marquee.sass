@@ -8,16 +8,21 @@
 
     --gap: 22px
     gap: var(--gap)
+
     &:last-child
         margin-bottom: 0
 
     &-content
         gap: var(--gap)
         list-style: none
-        animation: scroll 15s linear infinite
+        animation: scroll 20s linear infinite
         overflow: hidden
         flex-shrink: 0
 
+    &:hover
+        .marquee
+            &-content
+                animation-play-state: paused !important
 
     li
         background-color: rgba( 255, 255, 255, .05 )
@@ -31,7 +36,7 @@
 
     &.reverce
         .marquee-content
-            animation: scroll 15s linear infinite reverse
+            animation: scroll 20s linear infinite reverse
 
     @media screen and ( max-width: 1300px )
         --gap: 17px
