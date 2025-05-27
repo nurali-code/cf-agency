@@ -60,6 +60,9 @@ body
         @media screen and ( max-width: 1545px )
             background-size: 1545px auto
             background-image: url('../img/bg/full__bg-tab.svg')
+        @media screen and ( max-width: 494px )
+            background-size: 494px auto
+            background-image: url('../img/bg/full__bg-mob.svg')
 
     &::before
         content: ''
@@ -73,8 +76,9 @@ body
         pointer-events: none
         z-index: -1
 
-    &.is_active
-        overflow: hidden
+    @media screen and ( max-width: 1300px )
+        &.tab_active
+            overflow: hidden
 
 .container
     max-width: 1394px
@@ -262,14 +266,14 @@ main
                 opacity: .6
 
 section
-    padding: 50px 0
+    padding: 140px 0
     position: relative
     z-index: 1
     @media screen and ( max-width: 1100px )
-        padding: 30px 0
+        padding: 100px 0
 
     @media screen and ( max-width: 720px )
-        padding: 20px 0
+        padding: 70px 0
 
 @media screen and ( max-width: 1300px )
     input,

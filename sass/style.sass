@@ -77,10 +77,10 @@
         background-color: rgba( 0, 0, 0, .15 )
         border: 1px solid #FFFFFF0A
         backdrop-filter: blur(20px)
-        padding: 118px 69px 118px 100px
+        padding: 80px 69px 80px 80px
         border-radius: 20px
         color: $black
-        gap: 60px
+        gap: 20px
         position: relative
         z-index: 1
         --pt: 17px
@@ -110,8 +110,12 @@
 
     &__text
         opacity: .6
-        font-size: 22px
-        line-height: 150%
+        p
+            font-size: 22px
+            line-height: 150%
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
 
     &__bg
         position: absolute
@@ -139,7 +143,7 @@
         &__heading
             font-size: 42px
 
-        &__text
+        &__text p
             font-size: 16px
 
     @media screen and ( max-width: 740px )
@@ -160,11 +164,11 @@
             font-size: 20px
             margin-bottom: 24px
 
-        &__text
+        &__text p
             font-size: 14px
 
-    @media screen and ( max-width: 500px )
-        &__text
+    @media screen and ( max-width: 360px )
+        &__text p
             font-size: 10px
 
 @import 'slick'
@@ -207,7 +211,7 @@
         z-index: 11111
         top: 24px
         left: 50%
-        transition: all .2s ease-in-out
+        transition: all .3s ease
         transform: translateX(-50%)
         margin: 0
 
@@ -246,11 +250,10 @@
         border-bottom: none
         border-radius: 24px 24px 0 0
         padding: 50px 9px
-        backdrop-filter: blur(20px)
         transform: translateY(10px)
         opacity: 0
         visibility: hidden
-        transition: all .2s ease-in-out
+        transition: all .3s ease
 
     &__info
         font-weight: 400
@@ -314,7 +317,7 @@
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.49%, #0E1525 100%)
 
             &::after
-                transition: all .2s ease-in-out
+                transition: all .3s ease
                 opacity: 0
                 z-index: -1112
                 background-image: linear-gradient(180deg, #C5D86D 3.81%, #51DFFF 100%)
@@ -327,6 +330,7 @@
                     &__box
                         transform: translateY(0)
                         opacity: 1
+                        backdrop-filter: blur(15px)
                         visibility: visible
 
                     &__name
@@ -359,6 +363,9 @@
             &__slider--second
                 &-item
                     aspect-ratio: 1
+                    &::before
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.49%, #000000 100%)
+
                     &::after
                         display: none
 
@@ -785,9 +792,6 @@
                     min-width: 20px
 
 @import 'footer'
-
-
-
 
 // .fr
 // body::before,

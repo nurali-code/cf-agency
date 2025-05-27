@@ -41,7 +41,7 @@
 
     @media (min-width: 720px)
         transition: all .3s ease-in-out
-        &:not(.active)
+        &:not(.tab_active)
             backdrop-filter: blur(30px)
             background-color: rgba(0, 0, 0, .15)
 
@@ -72,7 +72,7 @@
             &::after
                 top: calc(50% + 4.5px)
 
-            &.active
+            &.tab_active
                 &::before,
                 &::after
                     top: 50%
@@ -95,9 +95,9 @@
             overflow-x: scroll
             opacity: 0
             visibility: hidden
-            transform: translateY(-20%)
+            transform: translateY(20%)
 
-            &.active
+            &.tab_active
                 opacity: 1
                 visibility: visible
                 transform: translateY(0)

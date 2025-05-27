@@ -1,7 +1,6 @@
 // Меню бургер
-$('.btn__menu').on('click', function () {
-    $(this).toggleClass('active');
-    $('.header .nav, .header').toggleClass('active');
+$('.btn__menu, header .nav__list-link').on('click', function () {
+    window.innerWidth < 1300 ? $('.header .nav, .header, body, .btn__menu').toggleClass('tab_active') : '';
 });
 
 $('.fr__slider').slick({
@@ -90,7 +89,7 @@ $('select').each(function () {
     const hasSelected = $selectedOption.length > 0;
     const defaultOption = hasSelected ? $selectedOption : $this.find('option').eq(0);
     const defaultText = defaultOption.text();
-   
+
     const $customSelect = $('<div class="select"></div>')
         .addClass($this.attr('class'))
         .insertAfter($this)
