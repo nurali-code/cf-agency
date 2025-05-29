@@ -49,14 +49,24 @@ body, html
     height: 100%
     z-index: -1
     overflow: hidden
-    svg 
+    svg
+        display: none
         width: 100%
-        min-width: 1728px
         position: absolute
         z-index: 1
         left: 50%
         top: 0
         transform: translateX(-50%)
+
+    @media screen and ( min-width: 1545px )
+        &__pc
+            min-width: 1728px
+            display: block !important
+
+    @media screen and ( max-width: 720px )
+        &__mob
+            min-width: 494px
+            display: block !important
 
 body
     min-height: 100vh
@@ -94,8 +104,7 @@ body
         pointer-events: none
         z-index: -1
         @media screen and ( max-width: 494px )
-            background-size: 100% auto 
-
+            background-size: 100% auto
 
     @media screen and ( max-width: 1300px )
         &.tab_active
@@ -322,7 +331,6 @@ section
         font-size: 12px
         letter-spacing: 12px * 0.025
 
-
-    .btn 
+    .btn
         font-size: 14px
         min-height: 36px
