@@ -21,6 +21,7 @@ $('.fr__slider').slick({
         {
             breakpoint: 992,
             settings: {
+                dots: true,
                 slidesToShow: 2,
             }
         }
@@ -82,7 +83,7 @@ $('select').each(function () {
     const $selectedOption = $this.find('option[selected]');
     const hasSelected = $selectedOption.length > 0;
     const defaultOption = hasSelected ? $selectedOption : $this.find('option').eq(0);
-    const defaultText = defaultOption.text();
+    const defaultText = defaultOption.text().replace(/[^+\d]/g, '');
 
     const $customSelect = $('<div class="select"></div>')
         .addClass($this.attr('class'))
@@ -99,22 +100,19 @@ $('select').each(function () {
     });
     $customSelect.click(function (e) {
         e.stopPropagation();
-        const $parent = $(this).parent();
-        $('.select-wrap').css('z-index', '');
         $('.select.active').not(this).removeClass('active').next('.select-options').hide();
         $(this).toggleClass('active').next('.select-options').slideToggle(300);
-        // $parent.css('z-index', $(this).hasClass('active') ? '2222' : '');
     });
     $optionlist.on('click', 'li', function (e) {
         e.stopPropagation();
-        $customSelect.html('<span>' + $(this).text()).removeClass('active' + '</span>');
+        const sanitizedValue = $(this).text().replace(/[^+\d]/g, '');
+        $customSelect.html('<span>' + sanitizedValue + '</span>').removeClass('active');
         $customSelect.removeClass('active');
-        $this.val($(this).attr('rel')).trigger('change'); // Р’С‹Р·РѕРІ .trigger('change')
+        $this.val($(this).attr('rel')).trigger('change'); 
         $optionlist.hide();
     });
     $(document).click(function () {
         $customSelect.removeClass('active');
-        // $wrapper.css('z-index', '');
         $optionlist.hide();
     });
 });
