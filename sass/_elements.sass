@@ -58,12 +58,16 @@ body
         pointer-events: none
         z-index: -1
         background-image: url('../img/bg/full__bg.svg')
-        @media screen and ( max-width: 1545px )
+    @media screen and ( max-width: 1545px )
+        &::after
             background-size: 1545px auto
             background-image: url('../img/bg/full__bg-tab.svg')
-        @media screen and ( max-width: 494px )
+    @media screen and ( max-width: 494px )
+        &:not(.ios)::after
             background-size: 494px auto
             background-image: url('../img/bg/full__bg-mob.svg')
+        &.ios::after
+            background-image: url('../img/bg/full__bg-mob.png')
 
     &::before
         content: ''
@@ -263,7 +267,7 @@ main
         padding: 10px
         border-radius: 8px
         overflow-y: scroll
-        scrollbar-color: $dark 
+        scrollbar-color: $dark
         scrollbar-width: thin
         &::-webkit-scrollbar
             width: 8px

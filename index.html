@@ -22,6 +22,13 @@
 </head>
 
 <body>
+    <script>
+        var isSafariIOS = /iP(hone|ad|od).*Safari/i.test(navigator.userAgent);
+        if (isSafariIOS) {
+            document.body.classList.add("ios");
+        }
+    </script>
+
     <header class="header">
         <div class="container fx-ac fx-jb">
             <a href="#" class="logo fx-ac">
