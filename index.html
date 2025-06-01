@@ -24,8 +24,27 @@
 <body>
     <script>
         var isSafariIOS = /iP(hone|ad|od).*Safari/i.test(navigator.userAgent);
-        if (isSafariIOS) {
-            document.body.classList.add("ios");
+        if (isSafariIOS && window.innerWidth <= 508) {
+            var picture = document.createElement("picture");
+            var avifSource = document.createElement("source");
+            avifSource.srcset = "img/bg/full__bg-mob.avif";
+            avifSource.type = "image/avif";
+
+            var webpSource = document.createElement("source");
+            webpSource.srcset = "img/bg/full__bg-mob.webp";
+            webpSource.type = "image/webp";
+
+            var pngImg = document.createElement("img");
+            pngImg.src = "img/bg/full__bg-mob.png";
+            pngImg.alt = "Background";
+
+            picture.appendChild(avifSource);
+            picture.appendChild(webpSource);
+            picture.appendChild(pngImg);
+            picture.classList.add('ios');
+
+            document.body.classList.add('ios');
+            document.body.insertBefore(picture, document.body.firstChild);
         }
     </script>
 
