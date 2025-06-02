@@ -5,11 +5,11 @@ $('.btn__menu, header .nav__list-link').on('click', function () {
 
 $('.fr__slider').slick({
     slidesToShow: 4,
-    infinite: true,
+    infinite: false,
     slidesToScroll: 1,
     arrows: false,
     swipeToSlide: true,
-    centerMode: true,
+    // centerMode: true,
     centerPadding: '6px',
     responsive: [
         {
@@ -30,11 +30,10 @@ $('.fr__slider').slick({
 
 $('.fr__slider--second').slick({
     slidesToShow: 5,
-    infinite: true,
+    infinite: false,
     slidesToScroll: 1,
     arrows: false,
     swipeToSlide: true,
-    centerMode: true,
     centerPadding: '6px',
     responsive: [
         {
@@ -53,7 +52,7 @@ $('.fr__slider--second').slick({
             }
         },
         {
-            breakpoint: 992,
+            breakpoint: 1120,
             settings: {
                 variableWidth: true,
                 infinite: false,
