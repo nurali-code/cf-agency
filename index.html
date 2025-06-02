@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
@@ -23,7 +24,7 @@
 
 <body>
     <script>
-        var isSafariIOS=/iP(hone|ad|od).*Safari/i.test(navigator.userAgent); if (isSafariIOS && window.innerWidth <=508){ var picture=document.createElement("picture"); var avifSource=document.createElement("source"); avifSource.srcset="img/bg/full__bg-mob.avif"; avifSource.type="image/avif"; var webpSource=document.createElement("source"); webpSource.srcset="img/bg/full__bg-mob.webp"; webpSource.type="image/webp"; var pngImg=document.createElement("img"); pngImg.src="img/bg/full__bg-mob.png"; pngImg.alt="Background"; picture.appendChild(avifSource); picture.appendChild(webpSource); picture.appendChild(pngImg); picture.classList.add('ios'); document.body.classList.add('ios'); document.body.insertBefore(picture, document.body.firstChild);}
+        var isSafariIOS = /iP(hone|ad|od).*Safari/i.test(navigator.userAgent); if (isSafariIOS && window.innerWidth <= 508) { var picture = document.createElement("picture"); var avifSource = document.createElement("source"); avifSource.srcset = "img/bg/full__bg-mob.avif"; avifSource.type = "image/avif"; var webpSource = document.createElement("source"); webpSource.srcset = "img/bg/full__bg-mob.webp"; webpSource.type = "image/webp"; var pngImg = document.createElement("img"); pngImg.src = "img/bg/full__bg-mob.png"; pngImg.alt = "Background"; picture.appendChild(avifSource); picture.appendChild(webpSource); picture.appendChild(pngImg); picture.classList.add('ios'); document.body.classList.add('ios'); document.body.insertBefore(picture, document.body.firstChild); }
     </script>
 
     <header class="header">
@@ -75,10 +76,10 @@
         <section class="hero">
             <div class="container fx-col">
                 <div class="hero__content">
-                    <img src="img/cf-agency.png" alt="logo" class="hero__logo">
-                    <h1>Premium Traffic Provider</h1>
+                    <img data-aos="fade-up" src="img/cf-agency.png" alt="logo" class="hero__logo">
+                    <h1 data-aos="fade-up" data-aos-delay="200">Premium Traffic Provider</h1>
                 </div>
-                <a href="#about" class="hero__link">
+                <a data-aos="fade-up" data-aos-delay="400" href="#about" class="hero__link">
                     Learn more <svg class="ic">
                         <use xlink:href="img/sprite.svg#arr-d"></use>
                     </svg>
@@ -88,27 +89,28 @@
 
         <section class="behind" id="about">
             <div class="container">
-                <div class="behind__box fx-ac">
-                    <h2 class="behind__heading">We’re the ones behind the curtain.</h2>
+                <div class="behind__box fx-ac" data-aos="fade-up">
+                    <h2 data-aos="fade-right" class="behind__heading">We’re the ones behind the curtain.</h2>
                     <div class="behind__text">
-                        <p>
+                        <p data-aos="fade-left" data-aos-delay="100">
                             At CF Agency, we’re the close friends every brand needs — the ones who quietly power bold
                             growth. We’re a team of traffic experts, strategists, and performance marketers who don’t
                             chase
                             vanity metrics - we drive real results
                         </p>
-                        <p>
+                        <p data-aos="fade-left" data-aos-delay="200">
                             Our specialty? Building, scaling, and optimizing traffic systems that convert. From paid
                             media
                             to conversion funnels, we know what works - and we make it work fast.
                         </p>
-                        <p>
+                        <p data-aos="fade-left" data-aos-delay="300">
                             We value clear strategy, fast execution, and total transparency. No fluff, just numbers that
                             speak for themselves. Whether you’re launching or scaling, we bring the firepower and
                             finesse to
                             move the needle.
                         </p>
-                        <p>Because behind every great brand… there’s a team like us.</p>
+                        <p data-aos="fade-left" data-aos-delay="400">Because behind every great brand… there’s a team
+                            like us.</p>
                     </div>
                 </div>
             </div>
@@ -116,9 +118,9 @@
 
         <div class="fr__bg">
             <section class="fr" id="your_friends">
-                <h2 class="h2">Your close friends</h2>
+                <h2 class="h2" data-aos="fade-up">Your close friends</h2>
                 <div class="fr__slider fx-ac">
-                    <div class="fr__slider-item">
+                    <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="fr__name">Richard</h3>
                         <img src="img/fr-01.png" alt="fr-1" class="fr__img" loading="lazy">
                         <div class="fr__box">
@@ -142,7 +144,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="fr__slider-item">
+                    <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="fr__name">Lesia</h3>
                         <img src="img/fr-04.png" alt="fr-1" class="fr__img" loading="lazy">
                         <div class="fr__box">
@@ -165,7 +167,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="fr__slider-item">
+                    <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="fr__name">Anton</h3>
                         <img src="img/fr-03.png" alt="fr-1" class="fr__img" loading="lazy">
                         <div class="fr__box">
@@ -188,7 +190,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="fr__slider-item">
+                    <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="400">
                         <h3 class="fr__name">100+</h3>
                         <h3 class="fr__number">100+</h3>
                         <img src="img/fr-100.png" alt="fr-1" class="fr__img" loading="lazy">
@@ -212,13 +214,13 @@
                         </div>
                     </div>
                 </div>
-                <a href="#submit_request" class="btn fr__submit">Submit Request</a>
+                <a href="#submit_request" data-aos="fade-up" class="btn fr__submit">Submit Request</a>
             </section>
 
             <section class="company">
-                <h2 class="h2">Company working with us</h2>
+                <h2 class="h2" data-aos="fade-up">Company working with us</h2>
 
-                <div class="marquee fx-ac">
+                <div class="marquee fx-ac" data-aos="fade-up" data-aos-delay="100">
                     <ul class="marquee-content fx-ac">
                         <li><a href="https://www.softswiss.com/" target="_blank"><img src="img/partners/partner-01.svg"
                                     alt="partner"></a></li>
@@ -273,7 +275,7 @@
                     </ul>
                 </div>
 
-                <div class="marquee reverce fx-ac">
+                <div class="marquee reverce fx-ac" data-aos="fade-up" data-aos-delay="200">
                     <ul class="marquee-content fx-ac">
                         <li><a href="https://www.softswiss.com/" target="_blank"><img src="img/partners/partner-01.svg"
                                     alt="partner"></a></li>
@@ -332,16 +334,16 @@
 
         <section class="traffic" id="analytics">
             <div class="container">
-                <h2 class="h2">Our premium traffic metrics</h2>
+                <h2 class="h2" data-aos="fade-up">Our premium traffic metrics</h2>
                 <div class="traffic__row fx-ac fx-jb">
-                    <div class="traffic__col">
+                    <div class="traffic__col" data-aos="fade-right" data-aos-delay="100">
                         <img src="img/prem/pr01.png" alt="01" loading="lazy" class="traffic__img">
                     </div>
-                    <div class="traffic__col">
+                    <div class="traffic__col" data-aos="fade-up" data-aos-delay="200">
 
                         <img src="img/prem/pr02.png" alt="01" loading="lazy" class="traffic__img">
                     </div>
-                    <div class="traffic__col">
+                    <div class="traffic__col" data-aos="fade-left" data-aos-delay="300">
                         <img src="img/prem/pr03.png" alt="01" loading="lazy" class="traffic__img">
                     </div>
                 </div>
@@ -349,9 +351,9 @@
         </section>
 
         <section class="fr --sm" id="our_friends">
-            <h2 class="h2">Our close friends</h2>
+            <h2 class="h2" data-aos="fade-up">Our close friends</h2>
             <div class="fr__slider--second fx-ac">
-                <div class="fr__slider-item">
+                <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="fr__name">Antonio Capushino</h3>
                     <img src="img/fr_sm-01.png" alt="fr-1" class="fr__img" loading="lazy">
                     <div class="fr__box">
@@ -376,7 +378,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="fr__slider-item">
+                <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="fr__name">Dima Grey</h3>
                     <img src="img/fr_sm-02.png" alt="fr-1" class="fr__img" loading="lazy">
                     <div class="fr__box">
@@ -401,7 +403,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="fr__slider-item">
+                <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="fr__name">Antonio Capushino</h3>
                     <img src="img/fr_sm-03.png" alt="fr-1" class="fr__img" loading="lazy">
                     <div class="fr__box">
@@ -426,7 +428,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="fr__slider-item">
+                <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="fr__name">Antonio Capushino</h3>
                     <img src="img/fr_sm-04.png" alt="fr-1" class="fr__img" loading="lazy">
                     <div class="fr__box">
@@ -451,7 +453,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="fr__slider-item">
+                <div class="fr__slider-item" data-aos="fade-up" data-aos-delay="500">
                     <h3 class="fr__name">Antonio Capushino</h3>
                     <img src="img/fr_sm-04.png" alt="fr-1" class="fr__img" loading="lazy">
                     <div class="fr__box">
@@ -481,13 +483,13 @@
 
         <section class="contact" id="submit_request">
             <div class="container">
-                <h2 class="h2">Become our friend</h2>
+                <h2 class="h2" data-aos="fade-up">Become our friend</h2>
 
                 <div class="contact-wrap">
-                    <h3 class="contact__subheading">
-                        <span>we create <br class="mob-show"> conversions</span>
+                    <h3 class="contact__subheading" data-aos="fade-up" data-aos-delay="100">
+                        <span data-aos="fade-up" data-aos-delay="200">we create <br class="mob-show"> conversions</span>
                     </h3>
-                    <form class="contact__form fx-w">
+                    <form data-aos="fade-up" class="contact__form fx-w">
                         <div class="inp-wrap">
                             <label for="name">Your name</label>
                             <input type="text" placeholder="Name and Surname" required>
@@ -748,12 +750,12 @@
                         </div>
                         <button class="btn" type="submit">Send </button>
                     </form>
-                    <p class="contact__info">
+                    <p class="contact__info" data-aos="fade-up">
                         By clicking on the button, you agree to the processing of <br class="mob-hide"> personal data
                         and to the
                         terms of use
                     </p>
-                    <div class="contact__tg fx-ac fx-jb">
+                    <div data-aos="fade-up" class="contact__tg fx-ac fx-jb">
                         <p class="contact__tg-text">Or message us on <b>Telegram</b>:</p>
                         <a href="https://t.me/LLesy_aaa" target="_blank" class="contact__tg-btn fx-ac">
                             <img src="img/tg-2.svg" alt="tg" loading="lazy"> t.me/LLesy_aaa
@@ -813,6 +815,7 @@
     </footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

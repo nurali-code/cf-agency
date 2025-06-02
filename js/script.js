@@ -3,6 +3,9 @@ $('.btn__menu, header .nav__list-link').on('click', function () {
     window.innerWidth < 1300 ? $('.header .nav, .header, body, .btn__menu').toggleClass('tab_active') : '';
 });
 
+AOS.init({ offset: 100, duration: 1500, });
+
+
 $('.fr__slider').slick({
     slidesToShow: 4,
     infinite: false,
@@ -107,7 +110,7 @@ $('select').each(function () {
         const sanitizedValue = $(this).text().replace(/[^+\d]/g, '');
         $customSelect.html('<span>' + sanitizedValue + '</span>').removeClass('active');
         $customSelect.removeClass('active');
-        $this.val($(this).attr('rel')).trigger('change'); 
+        $this.val($(this).attr('rel')).trigger('change');
         $optionlist.hide();
     });
     $(document).click(function () {
