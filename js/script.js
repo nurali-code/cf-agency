@@ -1,10 +1,19 @@
 // Меню бургер
-$('.btn__menu, header .nav__list-link').on('click', function () {
-    window.innerWidth < 1300 ? $('.header .nav, .header, body, .btn__menu').toggleClass('tab_active') : '';
+$('.btn__menu, header .nav__list-link').on('click', function (e) {
+    if ($(this).hasClass('nav__list-link')) {
+        e.preventDefault();
+        const targetId = $(this).attr('href');
+        const headerHeight = $('.header').outerHeight();
+        $('html, body').animate({
+            scrollTop: $(targetId).offset().top - headerHeight
+        }, 800);
+    }
+    if (window.innerWidth < 1300) {
+        $('.header .nav, .header, body, .btn__menu').toggleClass('tab_active');
+    }
 });
 
-AOS.init({ offset: 100, duration: 1500, });
-
+AOS.init({ offset: 85, duration: 1500, });
 
 $('.fr__slider').slick({
     slidesToShow: 4,

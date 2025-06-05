@@ -31,8 +31,6 @@ $add-1: var(--add-1)
 $add-2: var(--add-2)
 $add-3: var(--add-3)
 
-html
-    scroll-behavior: smooth
 body, html
     font-family: "Poppins", sans-serif
     font-weight: 400
@@ -99,9 +97,13 @@ picture.ios
         left: 0
         width: 100%
         height: 100%
+        overflow: hidden
         z-index: -1
         img
             min-width: 508px
+            height: 100%
+            object-fit: cover
+            object-position: top center
             position: absolute
             top: 0
             left: 50%
