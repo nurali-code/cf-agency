@@ -13,7 +13,19 @@ $('.btn__menu, header .nav__list-link').on('click', function (e) {
     }
 });
 
-AOS.init({ offset: 85, duration: 1500, });
+$('a[href^="#"]').on('click', function (e) {
+    if (!$(this).hasClass('nav__list-link')) {
+        e.preventDefault();
+        const targetId = $(this).attr('href');
+        if (targetId && $(targetId).length) {
+            $('html, body').animate({
+                scrollTop: $(targetId).offset().top
+            }, 800);
+        }
+    }
+});
+
+AOS.init({ offset: 10, duration: 1000, });
 
 $('.fr__slider').slick({
     slidesToShow: 4,

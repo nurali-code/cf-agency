@@ -23,10 +23,6 @@
 </head>
 
 <body>
-    <script>
-        var isSafariIOS = /iP(hone|ad|od).*Safari/i.test(navigator.userAgent); if (isSafariIOS && window.innerWidth <= 508) { var picture = document.createElement("picture"); var avifSource = document.createElement("source"); avifSource.srcset = "img/bg/full__bg-mob.avif"; avifSource.type = "image/avif"; var webpSource = document.createElement("source"); webpSource.srcset = "img/bg/full__bg-mob.webp"; webpSource.type = "image/webp"; var pngImg = document.createElement("img"); pngImg.src = "img/bg/full__bg-mob.png"; pngImg.alt = "Background"; picture.appendChild(avifSource); picture.appendChild(webpSource); picture.appendChild(pngImg); picture.classList.add('ios'); document.body.classList.add('ios'); document.body.insertBefore(picture, document.body.firstChild); }
-    </script>
-
     <header class="header">
         <div class="container fx-ac fx-jb">
             <a href="#" class="logo fx-ac">
@@ -42,7 +38,7 @@
                     <li><a href="#your_friends" class="nav__list-link">Your friends</a></li>
                     <li><a href="#analytics" class="nav__list-link">analytics</a></li>
                     <li><a href="#our_friends" class="nav__list-link">our friends</a></li>
-                    <li class="tb-show"><a href="#submit_request" class="nav__list-link">Submit Request</a></li>
+                    <li class="tb-show"><a href="#submit_request" class="nav__list-link">Become our friend</a></li>
                 </ul>
 
                 <div class="nav__chat">
@@ -68,7 +64,7 @@
                 <p class="nav__footer tb-show">© 2025 — CF Agency All rights reserved.</p>
             </nav>
 
-            <a href="#submit_request" class="btn tb-hide">Submit Request</a>
+            <a href="#submit_request" class="btn tb-hide">Become our friend</a>
         </div>
     </header>
 
@@ -93,7 +89,8 @@
                     <h2 data-aos="fade-right" class="behind__heading">We’re the ones behind the curtain.</h2>
                     <div class="behind__text">
                         <p data-aos="fade-left" data-aos-delay="100">
-                            At CF Agency, we’re the close friends every brand needs — the ones who quietly power bold
+                            <b>At CF Agency</b>, we’re the close friends every brand needs — the ones who quietly power
+                            bold
                             growth. We’re a team of traffic experts, strategists, and performance marketers who don’t
                             chase
                             vanity metrics - we drive real results
@@ -101,16 +98,18 @@
                         <p data-aos="fade-left" data-aos-delay="200">
                             Our specialty? Building, scaling, and optimizing traffic systems that convert. From paid
                             media
-                            to conversion funnels, we know what works - and we make it work fast.
+                            to conversion funnels, <b>we know what works - and we make it work fast.</b>
                         </p>
                         <p data-aos="fade-left" data-aos-delay="300">
-                            We value clear strategy, fast execution, and total transparency. No fluff, just numbers that
+                            <b>We value clear strategy, fast execution, and total transparency</b>. No fluff, just
+                            numbers that
                             speak for themselves. Whether you’re launching or scaling, we bring the firepower and
                             finesse to
                             move the needle.
                         </p>
-                        <p data-aos="fade-left" data-aos-delay="400">Because behind every great brand… there’s a team
-                            like us.</p>
+                        <p data-aos="fade-left" data-aos-delay="400">
+                            <b>Because behind every great brand… there’s a team like us. </b>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -214,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#submit_request" data-aos="fade-up" class="btn fr__submit">Submit Request</a>
+                <a href="#submit_request" data-aos="fade-up" class="btn fr__submit">Become our friend</a>
             </section>
 
             <section class="company">
@@ -776,7 +775,7 @@
                     <a href="#our_friends" class="footer__nav-link">Our friends</a>
                     <a href="#analytics" class="footer__nav-link">Analytics</a>
                     <a href="#your_friends" class="footer__nav-link">Your friends</a>
-                    <a href="#submit_request" class="footer__nav-link tab-show">Submit Request</a>
+                    <a href="#submit_request" class="footer__nav-link tab-show">Become our friend</a>
                 </nav>
                 <div class="footer__col fx-col">
                     <nav class="footer__contacts">
@@ -813,6 +812,23 @@
             </div>
         </div>
     </footer>
+
+    <picture class="ios">
+        <source srcset="img/bg/full__bg-mob.avif" media="(max-width: 508px)" type="image/avif">
+        <source srcset="img/bg/full__bg-mob.webp" media="(max-width: 508px)" type="image/webp">
+        <source srcset="img/bg/full__bg-mob.png" media="(max-width: 508px)" type="image/png">
+        <source srcset="img/bg/full__bg-tab.avif" media="(min-width: 509px) and (max-width: 1545px)" type="image/avif">
+        <source srcset="img/bg/full__bg-tab.webp" media="(min-width: 509px) and (max-width: 1545px)" type="image/webp">
+        <source srcset="img/bg/full__bg-tab.png" media="(min-width: 509px) and (max-width: 1545px)" type="image/png">
+
+        <source srcset="img/bg/full__bg.avif" type="image/png">
+        <source srcset="img/bg/full__bg.webp" type="image/webp">
+        <img src="img/bg/full__bg.png" alt="Background">
+    </picture>
+
+    <!-- <script>
+        var isSafariIOS = /iP(hone|ad|od).*Safari/i.test(navigator.userAgent); if (isSafariIOS && window.innerWidth <= 508) { var picture = document.createElement("picture"); var avifSource = document.createElement("source"); avifSource.srcset = "img/bg/full__bg-mob.avif"; avifSource.type = "image/avif"; var webpSource = document.createElement("source"); webpSource.srcset = "img/bg/full__bg-mob.webp"; webpSource.type = "image/webp"; var pngImg = document.createElement("img"); pngImg.src = "img/bg/full__bg-mob.png"; pngImg.alt = "Background"; picture.appendChild(avifSource); picture.appendChild(webpSource); picture.appendChild(pngImg); picture.classList.add('ios'); document.body.classList.add('ios'); document.body.insertBefore(picture, document.body.firstChild); }
+    </script> -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/aos.js"></script>
