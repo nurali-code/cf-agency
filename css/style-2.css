@@ -537,11 +537,10 @@ input::placeholder,
 
 .telegram-prefix {
     padding: 0 15px;
-    height: 53px;
+    height: 100%;
     display: flex;
     align-items: center;
     background-color: rgba(0,0,0,0.3);
-    border: 2px solid rgba(255,255,255,0.28);
     border-right: none;
     border-radius: 10px 0 0 10px;
     font-size: 18px;
@@ -558,7 +557,6 @@ input::placeholder,
 @media screen and (max-width: 1300px) {
     .telegram-prefix,
     .telegram-input {
-        height: 47px;
         font-size: 16px;
     }
 }
@@ -566,7 +564,6 @@ input::placeholder,
 @media screen and (max-width: 720px) {
     .telegram-prefix,
     .telegram-input {
-        height: 38px;
         padding: 0 9px;
         font-size: 12px;
         border-width: 1px;
@@ -753,6 +750,9 @@ section {
         border-radius: 6px;
         font-size: 12px;
         letter-spacing: .3px
+    }
+    .inp-col {
+        padding: 0 9px 0 0; 
     }
 
     .select {
